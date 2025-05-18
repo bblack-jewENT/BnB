@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <title>Ms B's B&B</title>
+</head>
+<body>
+
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <h1>Ms B's B&B</h1>
+            </div>
+            <div class="navlinks">
+                <ul id="menulist">
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#rooms">rooms</a></li>
+                    <li><a href="#pages">pages</a></li>
+                    <li><a href="#news">news</a></li>
+                    <li><a href="#contact">contact</a></li>
+                    <li><i class="fa fa-search"></i></li>
+                    <li> <button class="primary-btn">BOOK NOW</button> </li>
+                    <span class="fa fa-bars" onclick="menutoggle()"></span>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var menulist = document.getElementById('menulist');
+        menulist.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (menulist.style.maxHeight == "0px") {
+                menulist.style.maxHeight = "100vh";
+            } else {
+                menulist.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+
+<section class="home">
+    <div class="content">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="images/banner-1.png" alt="">
+          <div class="text">
+            <h1>Spend Your Time</h1>
+            <p>Where Elegance Finds a Home – Welcome to Ms B's B&B.
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/banner-2.png" alt="">
+          <div class="text">
+            <h1>Spend Your Holiday</h1>
+            <p>Stay Boutique. Stay Ms B.
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="images/banner-3.png" alt="">
+          <div class="text">
+            <h1>Spend Your Holiday</h1>
+            <p>Ms B Hotel – Style, Comfort, and a Touch of Magic.
+            </p>
+            <div class="flex">
+              <button class="primary-btn">READ MORE</button>
+              <button class="secondary-btn">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+
+
+  <section class="book">
+    <div class="container flex_space">
+      <div class="text">
+        <h1> <span>Book </span> Your Rooms </h1>
+      </div>
+      <div class="form">
+        <form action="mailto:mrswartz4@icloud.com" method="POST" enctype="text/plain" class="grid">
+          <input type="date" placeholder="Arival Date">
+          <input type="date" placeholder="Departure Date">
+          <input type="number" placeholder="Adults">
+          <input type="number" placeholder="Children">
+          <input type="submit" value="CHECK AVAILABILITY">
+        </form>
+
+        <!-- <script>
+
+          document.querySelector('form.grid').addEventListener('submit', async function (e) {
+            e.preventDefault();
+        
+            const form = e.target;
+            const formData = new FormData(form);
+            const jsonData = {};
+        
+            formData.forEach((value, key) => {
+              jsonData[key] = value;
+            });
+        
+            const response = await fetch("https://formspree.io/f/mgvagzrj", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+              },
+              body: JSON.stringify(jsonData)
+            });
+        
+            if (response.ok) {
+              alert("Thank you! Your request has been sent.");
+              form.reset();
+            } else {
+              alert("There was an error. Please try again.");
+            }
+          });
+        </script> -->
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="about top">
+    <div class="container flex">
+      <div class="left">
+        <div class="heading">
+          <h1>WELCOME</h1>
+          <h2>Ms B's B&B</h2>
+        </div>
+        <p>Tucked away in a charming corner of the world, our bed & breakfast blends comfort, character, and a touch of magic. Whether you're here for a peaceful retreat, a romantic getaway, or a cozy weekend escape, you'll find thoughtful touches, heartfelt hospitality, and a stay that's anything but ordinary. Come in, make yourself at home, and let Ms B take care of the rest.</p>
+        <button class="primary-btn">ABOUT US</button>
+      </div>
+      <div class="right">
+        <img src="images/about.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="counter top">
+    <div class="container grid">
+      <div class="box">
+        <h1>2500</h1>
+        <hr>
+        <span>Customer</span>
+      </div>
+      <div class="box">
+        <h1>1250</h1>
+        <hr>
+        <span>Happy Customer</span>
+      </div>
+      <div class="box">
+        <h1>150</h1>
+        <hr>
+        <span>Expert Technicians</span>
+      </div>
+      <div class="box">
+        <h1>3550</h1>
+        <hr>
+        <span>Desktop Reaired</span>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="rooms">
+    <div class="container top">
+      <div class="heading">
+        <h1>EXPLORE</h1>
+        <h2>Our Rooms</h2>
+        <p>Each of our thoughtfully designed rooms offers a unique blend of charm and relaxation.
+        </p>
+      </div>
+
+      <div class="content mtop">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+          <div class="items">
+            <div class="image">
+              <img src="images/room-1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p> From soft linens to handpicked details, every space at Ms B’s B&B is crafted to make you feel instantly at ease.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R550 <span> <br> 24hour </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-2.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Whether you’re unwinding after a day of exploring or savoring a slow morning, our rooms are your perfect retreat.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R350 <span> <br> 4hours </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-3.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>At Ms B’s B&B, no two rooms are exactly alike—each one has its own personality, thoughtfully styled.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R250 <span> <br> 2h30min </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-4.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Expect modern comforts like complimentary Wi-Fi, in-room tea and coffee, fluffy towels, and locally sourced bath products.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R350 <span> <br> 6hours </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-5.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Some rooms feature private balconies, vintage furnishings, or views that make mornings extra magical.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R550 <span> <br> 24h30min </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-6.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>Every detail has been chosen with care to ensure your experience is both restful and memorable.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R650 <span> <br> 2 days </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-7.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>So whether you're here for one night or a long weekend, our rooms are ready to welcome you with open arms (and super comfy pillows).
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R1300 <span> <br> Per week </span> </h3>
+              </div>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/room-8.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Superior Rooms</h2>
+              <div class="rate flex">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <p>At Ms B’s B&B in the heart of Mamelodi, each room offers more than just a place to sleep—it’s a little slice of local comfort and charm.
+              </p>
+              <div class="button flex">
+                <!-- <button class="primary-btn">BOOK NOW</button> -->
+                <h3>R6000 <span> <br> Per month </span> </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 40,
+      nav: true,
+      dots: false,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2,
+          margin: 10,
+        },
+        1000: {
+          items: 3
+        }
+      }
+    })
+  </>
+
+
+
+  <section class="gallery">
+    <div class="container top">
+      <div class="heading">
+        <h1>PHOTOS</h1>
+        <h2>Our Gallery</h2>
+        <p>From cozy corners and beautifully styled rooms to the vibrant spirit of Mamelodi. 
+      </div>
+    </div>
+
+    <div class="content mtop"> 
+      <div class="owl-carousel owl-carousel1 owl-theme">
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-1.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-2.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-3.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-4.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-5.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-6.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-4.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-3.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-1.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+        <div class="items">
+          <div class="img">
+            <img src="images/gallery-6.png" alt="">
+          </div>
+          <div class="overlay">
+            <span class="fa fa-plus"> </span>
+            <h3>Photo Title Here.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    $('.owl-carousel1').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
+      navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 4,
+        },
+        1000: {
+          items: 6
+        }
+      }
+    })
+  </script>
+
+
+  <section class="services top">
+    <div class="container">
+      <div class="heading">
+        <h1>SERVICES</h1>
+        <h2>Our Services</h2>
+        <p>At Ms B’s B&B, we believe great service goes beyond a smile—it’s about making every guest feel seen, valued, and at home
+      </div>
+
+
+      <div class="content flex_space">
+        <div class="left grid2">
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-champagne-glasses"></i>
+              <h3>Delicious Food</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-person-biking"></i>
+              <h3>Fitness</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-utensils"></i>
+              <h3>Inhouse Restaurant</h3>
+            </div>
+          </div>
+          <div class="box">
+            <div class="text">
+              <i class="fa-solid fa-spa"></i>
+              <h3>Beauty Spa</h3>
+            </div>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/service.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="Customer top">
+    <div class="container">
+      <div class="owl-carousel owl-carousel2 owl-theme">
+        <div class="item">
+          <i class="fa-solid fa-quote-right"></i>
+          <p>Staying at Ms B’s B&B was like visiting a favorite aunt—warm, welcoming, and full of heart. The room was spotless and cozy, the breakfast was delicious, and Ms B made sure I had everything I needed. I came for a weekend in Mamelodi and left feeling like family. Can’t wait to return.
+            </p>
+          <h3>Thandi, Johannesburg</h3>
+          <!-- <label>Thandi, Johannesburg</label> -->
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-quote-right"></i>
+            <p>Staying at Ms B’s B&B was like visiting a favorite aunt—warm, welcoming, and full of heart. The room was spotless and cozy, the breakfast was delicious, and Ms B made sure I had everything I needed. I came for a weekend in Mamelodi and left feeling like family. Can’t wait to return.</p>
+          <!-- <h3>Jones, Hatfield</h3> -->
+          <!-- <label>Jones, Hatfield</label> -->
+        </div>
+        <div class="item">
+          <i class="fa-solid fa-quote-right"></i>
+          <p>Staying at Ms B’s B&B was like visiting a favorite aunt—warm, welcoming, and full of heart. The room was spotless and cozy, the breakfast was delicious, and Ms B made sure I had everything I needed. I came for a weekend in Mamelodi and left feeling like family. Can’t wait to return.</p>
+          <!-- <h3>Thabo, Soweto</h3> -->
+          <!-- <label>Thabo, Soweto</label> -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel2').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1,
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="news top rooms">
+    <div class="container">
+      <div class="heading">
+        <h1>NEWS</h1>
+        <h2>Our News</h2>
+        <p>The heart of Ms B’s B&B lives in the stories our guests leave behind.
+      </div>
+
+
+      <div class="content flex">
+        <div class="left grid2">
+          <div class="items">
+            <div class="image">
+              <img src="images/blog-1.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Sipho, Cape Town</h2>
+              <div class="admin flex">
+                <i class="fa fa-user"></i>
+                <label>Guest</label>
+                <i class="fa fa-heart"></i>
+                <label>10.5k</label>
+                <i class="fa fa-comments"></i>
+              </div>
+              <p>"I had no idea what to expect when I booked Ms B’s, but it ended up being the highlight of my trip to Pretoria."</p>
+            </div>
+          </div>
+          <div class="items">
+            <div class="image">
+              <img src="images/blog-2.png" alt="">
+            </div>
+            <div class="text">
+              <h2>Herman, Johannesburg</h2>
+              <div class="admin flex">
+                <i class="fa fa-user"></i>
+                <label>Guest</label>
+                <i class="fa fa-heart"></i>
+                <label>5.7k</label>
+                <i class="fa fa-comments"></i>
+              </div>
+              <p>"The room was spotless, the vibe was peaceful, and Ms B herself made me feel like I was visiting family."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <div class="box flex">
+            <div class="img">
+              <img src="images/blog-s1.png" alt="">
+            </div>
+            <div class="stext">
+              <h2>Busi</h2>
+              <p>"It’s more than just a B&B—it’s a whole experience."
+              </p>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="img">
+              <img src="images/blog-s2.png" alt="">
+            </div>
+            <div class="stext">
+              <h2>Nomvula</h2>
+              <p>"Her breakfast? Unmatched. I left feeling rested and inspired."
+              </p>
+            </div>
+          </div>
+          <div class="box flex">
+            <div class="img">
+              <img src="images/blog-s3.png" alt="">
+            </div>
+            <div class="stext">
+              <h2>Dave</h2>
+              <p>"Personally i think its one of the best B&B in Pretoria, not just Mamelodi alone." 
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="newsletter mtop">
+    <div class="container flex_space">
+      <h1>Subscribe to Our Newsletter</h1>
+      <input type="text" placeholder="Your Email">
+      <button class="subcribe-button">Subscribe</button>
+    </div>
+  </section> -->
+<!-- 
+  <form action="mailto:mrswartz4@icloud.com" method="POST" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="date" name="checkin" required>
+    <input type="date" name="checkout" required>
+    <button type="submit" class="primary-btn">Check Availability</button>
+  </form> -->
+
+
+  <footer>
+    <div class="container grid">
+      <div class="box">
+        <h1>Ms B's B&B</h1>
+        <p>At Ms B’s B&B, every stay is more than just a night away—it’s a chance to feel at home, connect with the heart of Mamelodi, and create memories that linger long after you leave. Whether you're visiting for rest, adventure, or simply a change of pace, our doors (and hearts) are always open. We look forward to hosting you soon.</p>
+
+        <div class="icon">
+          <i class="fa fa-facebook-f"></i>
+          <i class="fa fa-instagram"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-youtube"></i>
+        </div>
+      </div>
+
+      <div class="box">
+        <h2>Links</h2>
+        <ul>
+          <li>Company History</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Services</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h2>Contact Us</h2>
+        <p>Contact us on these No. and/or Email to book your stay while there's still space.
+        </p>
+        <i class="fa fa-location-dot"></i>
+        <label>12950 Kokela street, Mamelodi East. </label> <br>
+        <i class="fa fa-phone"></i>
+        <label>(81) 705 591 8</label> <br>
+        <i class="fa fa-envelope"></i>
+        <label>mrswartz4@icloud.com</label> <br>
+      </div>
+    </div>
+  </footer>
+
+  <div class="legal">
+    <p class="container">Copyright (c) 2022 Copyright Holder All Rights Reserved.</p>
+  </div>
+
+
+
+  <!-- <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"  crossorigin="anonymous" ></script>
+
+
+
+</body>
+</html>
